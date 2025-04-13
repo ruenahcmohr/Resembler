@@ -1,0 +1,68 @@
+opcodes:
+
+0    NOP
+1    IN     IN->*X
+2    OUT  V V->OUT
+     XTOY   *Y = *X
+     YTOX   *X = *Y
+15   HALT     
+
+
+3  v XSET V *X = V
+5  v XSUB V *X = (*X) - V
+   v SETX V  X = V
+11 v XJNZ V  jump + V if *X != 0
+12 v XJZ  V  jump + V is *X == 0
+
+
+4  v YSET V *Y = V
+6  v YSUB V *Y = (*Y) - V
+   v SETY V  Y = V
+13 v YJNZ V  jump + V if *Y != 0
+14 v YJZ  V  jump + V is *Y == 0
+
+
+
+
+-------------
+
+
+
+
+
+
+
+
+
+
+
+0    NOP
+1    IN     IN->*X
+2    OUT  V V->OUT
+15   HALT     
+3    SETX V  X = V
+4    SUBX V  X = X - V     
+5    TRAX    A = X  
+6    TRXA    X = A        
+7    LDAX    A = *X
+8    STAX   *X = A     
+9    LDA  V  A = V
+10   SUBA V  A = A - V     
+11   JNZA V  jump + V if A != 0
+12   JZA  V  jump + V if A == 0     
+13   JNZX V  jump + V if *X != 0
+14   JZX  V  jump + V if *X == 0    
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
